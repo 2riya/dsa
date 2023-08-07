@@ -1,0 +1,28 @@
+# Java specific
+*.class
+*.jar
+
+# Compiled source
+/target/
+
+# IntelliJ IDEA
+.idea/
+
+# Eclipse
+.settings/
+.metadata/
+bin/
+tmp/
+
+# Mac specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
+
