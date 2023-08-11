@@ -1,12 +1,14 @@
 # Java specific
 *.class
 *.jar
+out/
 
 # Compiled source
 /target/
 
 # IntelliJ IDEA
 .idea/
+*.iml
 
 # Eclipse
 .settings/
