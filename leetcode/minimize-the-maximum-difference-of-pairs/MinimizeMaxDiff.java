@@ -37,7 +37,8 @@ public class MinimizeMaxDiff {
         return pairCount >= p;
     }
 
-    private static int minimizeMax2(int[] a, int p) {
+    // This approach didn't work
+    /*private static int minimizeMax2(int[] a, int p) {
         Arrays.sort(a);
 
         int[] diff = new int[a.length];
@@ -77,5 +78,5 @@ public class MinimizeMaxDiff {
         }
 
         return ans;
-    }
+    }*/
 }
