@@ -4,6 +4,7 @@ public class UnionByRankWPathComp {
     public static void main(String[] args) {
         int[][] edges = new int[][] {{1, 2}, {2, 3}, {4, 5}, {6, 7}, {5, 6}, {3, 7}};
         int n = 7;
+
         unionByRankWPathComp(edges, n);
     }
 
@@ -53,11 +54,11 @@ public class UnionByRankWPathComp {
             }
 
             if (rank[rootOfV1] >= rank[rootOfV2]) {
-                parent[v2] = rootOfV1;
+                parent[rootOfV2] = rootOfV1;
                 rank[rootOfV1] = Math.max(rank[rootOfV1], rank[rootOfV2] + 1);
             } else {
-                parent[v1] = rootOfV2;
-                rank[rootOfV2]++;
+                parent[rootOfV1] = rootOfV2;
+                rank[rootOfV1] = Math.max(rank[rootOfV2], rank[rootOfV1] + 1);;
             }
         }
 
