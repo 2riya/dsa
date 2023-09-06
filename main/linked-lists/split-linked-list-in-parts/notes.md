@@ -6,7 +6,8 @@ but if len is not fully divisible by k, then 1 extra node will be added to parti
 
 k is no. of partitions to be made
 <br>after each partition is done
-<br>remaining partitions to be made gets decremented by 1
+<br>remaining partitions to be made gets decremented by 1, and len gets updated to remaining no. of nodes
+<br> Note: No. of partitions with extra node = len % k (Not implemented)
 
 ### Time Complexity
 n <- to compute length of list
