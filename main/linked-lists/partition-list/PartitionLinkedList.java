@@ -1,22 +1,22 @@
 public class PartitionLinkedList {
     public static void main(String[] args) {
-        ListNode<Integer> head = LinkedList.createLinkedList(1, 4, 3, 2, 5, 2);
+        ListNode head = LinkedList.createLinkedList(1, 4, 3, 2, 5, 2);
         int x = 3;
-        ListNode<Integer> result = partition(head, x);
+        ListNode result = partition(head, x);
         LinkedList.display(result);
 
         result = partitionWithConstantSpace(head, x);
         LinkedList.display(result);
     }
 
-    private static ListNode<Integer> partitionWithConstantSpace(ListNode<Integer> head, int x) {
-        ListNode<Integer> left = new ListNode<>();
-        ListNode<Integer> right = new ListNode<>();
+    private static ListNode partitionWithConstantSpace(ListNode head, int x) {
+        ListNode left = new ListNode();
+        ListNode right = new ListNode();
 
-        ListNode<Integer> leftPtr = left;
-        ListNode<Integer> rightPtr = right;
+        ListNode leftPtr = left;
+        ListNode rightPtr = right;
 
-        ListNode<Integer> p = head;
+        ListNode p = head;
 
         while (p != null) {
             if (p.val < x) {
@@ -35,14 +35,14 @@ public class PartitionLinkedList {
         return left.next;
     }
 
-    private static ListNode<Integer> partition(ListNode<Integer> head, int x) {
-        ListNode<Integer> left = new ListNode<>();
-        ListNode<Integer> right = new ListNode<>();
+    private static ListNode partition(ListNode head, int x) {
+        ListNode left = new ListNode();
+        ListNode right = new ListNode();
 
-        ListNode<Integer> leftPtr = left;
-        ListNode<Integer> rightPtr = right;
+        ListNode leftPtr = left;
+        ListNode rightPtr = right;
 
-        ListNode<Integer> p = head;
+        ListNode p = head;
 
         while (p != null) {
             if (p.val < x) {
