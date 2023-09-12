@@ -17,8 +17,7 @@ public class MinDelForUniqueFreq {
 
         int deleteOperationCount = 0;
         HashSet<Integer> frequency = new HashSet<>();
-        for (Map.Entry<Character, Integer> e : characterVsFrequencyMap.entrySet()) {
-            int currCharFrequency = e.getValue();
+        for (int currCharFrequency : characterVsFrequencyMap.values()) {
             while (currCharFrequency > 0 && frequency.contains(currCharFrequency)) {
                 deleteOperationCount++;
                 currCharFrequency--;
