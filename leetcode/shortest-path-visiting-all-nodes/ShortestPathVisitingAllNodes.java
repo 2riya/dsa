@@ -3,7 +3,7 @@ import java.util.Queue;
 public class ShortestPathVisitingAllNodes {
     public static void main(String[] args) {
         int[][] graph = {{1,2,3},{0},{0},{0}};
-        System.out.println(shortestPathLength(graphg));
+        System.out.println(shortestPathLength(graph));
     }
 
     public static int shortestPathLength(int[][] graph) {
