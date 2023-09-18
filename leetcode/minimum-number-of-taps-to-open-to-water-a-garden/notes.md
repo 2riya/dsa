@@ -1,6 +1,3 @@
-
-
-
 Given a tap i,
 It can water in the range of [i - ranges[i], i + ranges[i]]
 <br>
