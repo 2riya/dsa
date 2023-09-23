@@ -12,6 +12,16 @@ public class KruskalsAlgorithm {
         System.out.println(minSpanningTree);
     }
 
+    // TC: O(ElogV), E -> No. of edges, V -> No. of vertices
+
+    /**
+    * Expln: It is actually ElogE, because of sorting
+    * But no. of edges in a graph cannot exceed V * V
+    * => E <= V * V
+    * => logE <= 2logV
+    * Therefore, to put tight upper bound, O(ElogV) is considered
+    * @see <a href="https://stackoverflow.com/questions/20432801/time-complexity-of-the-kruskal-algorithm">Stack Overflow Reference</a>
+    **/
     private static int kruskalsAlgorithm(int[][] weightedEdges, int n) {
         Arrays.sort(weightedEdges, Comparator.comparingInt(o -> o[2]));
 
