@@ -44,6 +44,7 @@ public class UnionByRank {
             }
         }
 
+        // O(logN)
         public void union(int v1, int v2) {
             int rootOfV1 = find(v1);
             int rootOfV2 = find(v2);
@@ -61,6 +62,7 @@ public class UnionByRank {
             }
         }
 
+        // O(logN)
         public int find(int v) {
             return findRoot(v);
         }

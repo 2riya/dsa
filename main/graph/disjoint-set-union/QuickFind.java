@@ -30,6 +30,7 @@ public class QuickFind {
             }
         }
 
+        // O(n)
         public void union(int v1, int v2) {
             int pV1 = parent[v1];
             int pV2 = parent[v2];
@@ -45,6 +46,7 @@ public class QuickFind {
             }
         }
 
+        // O(1)
         public int find(int v) {
             return parent[v];
         }

@@ -32,11 +32,14 @@ public class QuickUnion {
         public DisjointSet(int n) {
             parent = new int[n];
 
+
+
             for (int i = 0; i < n; i++) {
                 parent[i] = i;
             }
         }
 
+        // O(tree_height), worst case: tree_height = n
         public void union(int v1, int v2) {
             int rV1 = find(v1);
             int rV2 = find(v2);
@@ -48,6 +51,7 @@ public class QuickUnion {
             parent[v2] = rV1;
         }
 
+        // O(tree_height), worst case: tree_height = n
         public int find(int v) {
             return findRoot(v);
         }

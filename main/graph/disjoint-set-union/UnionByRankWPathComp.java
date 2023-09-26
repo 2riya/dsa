@@ -45,6 +45,7 @@ public class UnionByRankWPathComp {
             }
         }
 
+        // nearly constant
         public void union(int v1, int v2) {
             int rootOfV1 = find(v1);
             int rootOfV2 = find(v2);
@@ -62,6 +63,7 @@ public class UnionByRankWPathComp {
             }
         }
 
+        // nearly constant
         public int find(int v) {
             return findRoot(v);
         }
