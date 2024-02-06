@@ -1,6 +1,6 @@
 <br> <b>Backtracking (Brute Force):</b>
 <br> Intuitively, it can be solved using backtracking as we can start with one path and see if it leads to destination and then backtrack to check another path
-<br> This will take exponential time, which will lead to time complexity
+<br> This will take exponential time
 <br> 
 <br> Time Complexity: 
 <br> Rec Relation: T(n) = 2T(n - 1) + 1 => O(2^n)
@@ -29,7 +29,7 @@
 <br> Therefore, either dp of 2 rows can be used, or 1D array can be used as follows:
 <br> <code>dp[i][j] = dp[i][j + 1] + d[i + 1][j]</code>
 <br> <code>dp[i][j+1]</code> <- This will be the adjacent right cell of 1D array
-<br> <code>d[i + 1][j]</code> <- This will be the already value present in <code>dp[i][j]</code> from previous iteration
+<br> <code>d[i + 1][j]</code> <- This will be the already present value in <code>dp[i][j]</code> from previous iteration
 <br> 
 <br> So, in current iteration it can be updated as:
 <br> <code>dp[i] = dp[i] + dp[i + 1]</code> // check code for proper conditions

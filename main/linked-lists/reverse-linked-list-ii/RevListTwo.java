@@ -40,4 +40,37 @@ public class RevListTwo {
 
         return sentinelNode.next;
     }
+
+    private static ListNode reverse2(ListNode head, int left, int right) {
+        ListNode ptr = head;
+        ListNode nodeBeforeLeft = null;
+        for (int i = 1; i < left; i++) {
+            nodeBeforeLeft = ptr;
+            ptr = ptr.next;
+            left--;
+            right--;
+        }
+
+        // The two pointers that will fix the final connections.
+        ListNode prev = nodeBeforeLeft;
+        ListNode curr = ptr;
+        ListNode next = null;
+
+        for (int i = 0; i < (right - left + 1); i++) {
+            next = ptr.next;
+            ptr.next = nodeBeforeLeft;
+            nodeBeforeLeft = ptr;
+            ptr = next;
+            right--;
+        }
+
+        if (prev != null) {
+            prev.next = nodeBeforeLeft;
+        } else {
+            head = nodeBeforeLeft;
+        }
+
+        curr.next = ptr;
+        return head;
+    }
 }

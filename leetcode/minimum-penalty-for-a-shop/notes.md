@@ -16,4 +16,3 @@ So if input[i] == 'Y', and we close at (i + 1)th hour, we were able to serve 1 c
 Whenever penalty is updated in this loop, it represents penalty of (i + 1)th hour, and if it is lesser than curr min penalty, then that hour will be earliest hour when shop can be closed
 <br>Basically, minimizing the penalty and hour associated with it
 
-1326. Minimum Number of Taps to Open to Water a Garden
